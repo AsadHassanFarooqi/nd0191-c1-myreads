@@ -6,6 +6,7 @@ import {Route, Routes} from "react-router-dom";
 import * as BooksAPI from "./api/BooksAPI";
 import ListBooks from "./components/ListBooks";
 import SearchBooks from "./components/SearchBooks";
+import NotFound from "./components/NotFound";
 
 // shelves
 const BOOK_SHELVES = [
@@ -54,6 +55,7 @@ function App() {
     <Routes>
       <Route exact path="/" element={<ListBooks bookshelves={BOOK_SHELVES} books={myBooks} onMove={moveBook} /> } />
       <Route exact path="/search" element={<SearchBooks books={myBooks}  onMove={moveBook} />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

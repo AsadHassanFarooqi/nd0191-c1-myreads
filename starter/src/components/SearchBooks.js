@@ -12,15 +12,15 @@ import SearchBooksResults from "./SearchBooksResults";
 const SearchBooks = ({books, onMove }) => {
   const [searchBooks, setSearchBooks] = useState([]);
 
-
   const searchAPI = async (query) => {
-    if(query.length > 0 && query.trim()) {
+    console.log(query);
+    if(query.length > 0) {
       const results = await BooksAPI.search(query);
       if(!results.error) {
         setSearchBooks(results);
-      } else {
-        setSearchBooks([]);
-      }
+      } 
+    } else {
+      setSearchBooks([]);
     }
   }
 

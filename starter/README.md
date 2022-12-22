@@ -1,3 +1,6 @@
+# Authors
+- [Asad Hassan Farooqi](https://github.com/AsadHassanFarooqi)
+
 # MyReads Project
 
 This is the final code of myReads app, submitted under the react-nano-degree. It uses the main concepts of
